@@ -8,55 +8,55 @@ import vid2 from '../vid2.mp4';
 import vid3 from '../vid3.mp4';
 
 
-const playfairDisplay = Playfair_Display({
+export const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
   weight: '600', // or your desired weight
 });
-const raleway = Raleway({
+export const raleway = Raleway({
   subsets: ['latin'],
   weight: ['300', '500', '700', '900'], // or your desired weight
 });
-const prompt = Prompt({
+export const prompt = Prompt({
   subsets: ['latin'],
   weight: ['400', '600', '700', '900'], // or your desired weight
 });
-const plusJakartaSans = Plus_Jakarta_Sans({
+export const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['200', '400', '700', '800'], // or your desired weight
 });
 
 const colCards = [
   {
-    srcUrl : '/col-card1.png',
-    title : 'RING COLLECTION'
+    srcUrl: '/col-card1.png',
+    title: 'RING COLLECTION'
   },
   {
-    srcUrl : '/col-card2.png',
-    title : 'BRACELET COLLECTION'
+    srcUrl: '/col-card2.png',
+    title: 'BRACELET COLLECTION'
   },
   {
-    srcUrl : '/col-card3.png',
-    title : 'WATCHES COLLECTION'
+    srcUrl: '/col-card3.png',
+    title: 'WATCHES COLLECTION'
   },
   {
-    srcUrl : '/col-card4.png',
-    title : 'CHAINS COLLECTION'
+    srcUrl: '/col-card4.png',
+    title: 'CHAINS COLLECTION'
   },
   {
-    srcUrl : '/col-card5.png',
-    title : 'EARRINGS COLLECTION'
+    srcUrl: '/col-card5.png',
+    title: 'EARRINGS COLLECTION'
   },
   {
-    srcUrl : '/col-card6.png',
-    title : 'EYEWEAR COLLECTION'
+    srcUrl: '/col-card6.png',
+    title: 'EYEWEAR COLLECTION'
   },
   {
-    srcUrl : '/col-card7.png',
-    title : 'VCA COLLECTION'
+    srcUrl: '/col-card7.png',
+    title: 'VCA COLLECTION'
   },
   {
-    srcUrl : '/col-card8.png',
-    title : 'NECKLACE COLLECTION'
+    srcUrl: '/col-card8.png',
+    title: 'NECKLACE COLLECTION'
   },
 
 ]
@@ -64,11 +64,6 @@ const colCards = [
 export default function Home() {
   return (
     <div className="relative">
-      <header className="p-5">
-        <div className="logo w-full flex justify-center">
-          <Image alt="pic" src={'/logo.png'} width={100} height={100}/>
-        </div>
-      </header>
       <section className="hero hero-bg w-full h-[50vh] text-white text-center flex flex-col justify-center items-center gap-5">
         <h1 className={`heading ${playfairDisplay.className} font-semibold text-2xl`}>Making you new</h1>
         <div className={`${raleway.className} font-medium text-base text-black bg-white rounded py-2 px-3 cursor-pointer`}>Shop Now</div>
@@ -76,7 +71,7 @@ export default function Home() {
       <section className="features my-12 flex flex-col gap-3 items-center justify-center">
         <div className="feature-card flex flex-col items-center justify-center gap-3 w-[53%] bg-[#fafafa] p-12 py-16 rounded text-center">
           <div className="svg1 w-[25px] ">
-            <Image className="w-full h-full" width={100} height={100} alt='feature 1' src={'/svg1.svg'}/>
+            <Image className="w-full h-full" width={100} height={100} alt='feature 1' src={'/svg1.svg'} />
           </div>
           <div className={`feature-card-text ${raleway.className} font-light text-sm`}>
             Very Fast Shipping
@@ -84,7 +79,7 @@ export default function Home() {
         </div>
         <div className="feature-card flex flex-col items-center justify-center gap-3 w-[53%] bg-[#fafafa] p-12 py-16 rounded text-center">
           <div className="svg1 w-[25px] ">
-            <Image className="w-full h-full" width={100} height={100} alt='feature 1' src={'/svg2.svg'}/>
+            <Image className="w-full h-full" width={100} height={100} alt='feature 1' src={'/svg2.svg'} />
           </div>
           <div className={`feature-card-text ${raleway.className} font-light text-sm`}>
             Secure Payments
@@ -92,7 +87,7 @@ export default function Home() {
         </div>
         <div className="feature-card flex flex-col items-center justify-center gap-3 w-[53%] bg-[#fafafa] p-12 py-16 rounded text-center">
           <div className="svg1 w-[25px] ">
-            <Image className="w-full h-full" width={100} height={100} alt='feature 1' src={'/svg3.svg'}/>
+            <Image className="w-full h-full" width={100} height={100} alt='feature 1' src={'/svg3.svg'} />
           </div>
           <div className={`feature-card-text ${raleway.className} font-light text-sm`}>
             Hassle-Free Returns
@@ -100,7 +95,7 @@ export default function Home() {
         </div>
         <div className="feature-card flex flex-col items-center justify-center gap-3 w-[53%] bg-[#fafafa] p-12 py-16 rounded text-center">
           <div className="svg1 w-[25px] ">
-            <Image className="w-full h-full" width={100} height={100} alt='feature 1' src={'/svg4.svg'}/>
+            <Image className="w-full h-full" width={100} height={100} alt='feature 1' src={'/svg4.svg'} />
           </div>
           <div className={`feature-card-text ${raleway.className} font-light text-sm`}>
             Gift Ready Packaging
@@ -119,26 +114,26 @@ export default function Home() {
         </div>
       </section>
       <button className={`cta ${raleway.className} fixed bottom-14 right-8 text-white font-bold bg-[#2B9D84] mt-[100px] uppercase flex items-center justify-center text-lg p-5 gap-x-3 rounded-full`}>
-          <span className="w-[36px]"><Image className="object-cover" width={100} height={100} alt="whatsapp" src={'/whatsappicon.png'}/></span>
-          {/* Chat Now */}
-        </button>
+        <span className="w-[36px]"><Image className="object-cover" width={100} height={100} alt="whatsapp" src={'/whatsappicon.png'} /></span>
+        {/* Chat Now */}
+      </button>
       <section className="collection px-4 py-12 mx-auto flex flex-col items-center w-full ">
         <h2 className={`collection-heading ${raleway.className} text-xl font-medium text-center`}>OUR ICONIC CUSTOM COLLECTION</h2>
         <div className="collections flex items-center justify-start gap-x-[11px] overflow-x-auto mt-10 hide-scrollbar">
-          <Image className="w-[47%] rounded" width={160} height={334} alt="collection pic" src={'/collection1.png'}/>
-          <Image className="w-[60%] rounded" width={240} height={350} alt="collection pic" src={'/collection2.png'}/>
-          <Image className="w-[43%] rounded" width={150} height={320} alt="collection pic" src={'/collection3.png'}/>
+          <Image className="w-[47%] rounded" width={160} height={334} alt="collection pic" src={'/collection1.png'} />
+          <Image className="w-[60%] rounded" width={240} height={350} alt="collection pic" src={'/collection2.png'} />
+          <Image className="w-[43%] rounded" width={150} height={320} alt="collection pic" src={'/collection3.png'} />
         </div>
         <button className={`shop ${raleway.className} font-medium text-base px-5 py-3 bg-[#121212] text-white mt-10 rounded`}>Shop Now</button>
       </section>
       <section className="px-4 py-12 w-full mx-auto flex flex-col items-center">
-        <h2 className={`collection-heading ${raleway.className} font-medium text-xl text-center`}>OBSESSIVE ATTENTION.<br/>MAKING YOU NEW</h2>
+        <h2 className={`collection-heading ${raleway.className} font-medium text-xl text-center`}>OBSESSIVE ATTENTION.<br />MAKING YOU NEW</h2>
         <div className="collection-grid grid grid-cols-2 gap-4">
           {
             colCards.map((card, index) => (
               <div key={index} className="collection-card flex flex-col justify-start gap-y-3">
                 <div className="card-img overflow-hidden rounded">
-                  <Image className="rounded mt-8 w-full" width={158} height={198} alt="collection card pic" src={card.srcUrl}/>
+                  <Image className="rounded mt-8 w-full" width={158} height={198} alt="collection card pic" src={card.srcUrl} />
                 </div>
                 <div className={` ${playfairDisplay.className} title font-semibold text-base`}>
                   {card.title}
@@ -154,17 +149,17 @@ export default function Home() {
           <div className="cp flex justify-center items-center gap-2 w-full">
             <div className="vid-container rounded-lg overflow-hidden min-w-[30%]">
               <video className="w-full h-full" width="320" height="240" autoPlay={true} loop={true} muted={true}>
-                <source src={'../vid1.mp4'} type="video/mp4"/>
+                <source src={'../vid1.mp4'} type="video/mp4" />
               </video>
             </div>
             <div className="vid-container rounded-lg overflow-hidden min-w-[40%]">
               <video className="w-full h-full" width="320" height="240" autoPlay={true} loop={true} muted={true}>
-                <source src={'../vid2.mp4'} type="video/mp4"/>
+                <source src={'../vid2.mp4'} type="video/mp4" />
               </video>
             </div>
             <div className="vid-container rounded-lg overflow-hidden min-w-[30%]">
               <video className="w-full h-full " width="320" height="240" autoPlay={true} loop={true} muted={true}>
-                <source src={'../vid3.mp4'} type="video/mp4"/>
+                <source src={'../vid3.mp4'} type="video/mp4" />
               </video>
             </div>
           </div>
@@ -175,10 +170,10 @@ export default function Home() {
         <h2 className={`cp-heading ${raleway.className} font-medium text-xl text-center uppercase`}>Jewelry Testing</h2>
         <div className="banner-vid mt-8">
           <div className="vid-container rounded-lg overflow-hidden">
-              <video className="w-full h-full " width="320" height="240" autoPlay={true} loop={true} muted={true}>
-                <source src={'../banner.mp4'} type="video/mp4"/>
-              </video>
-            </div>
+            <video className="w-full h-full " width="320" height="240" autoPlay={true} loop={true} muted={true}>
+              <source src={'../banner.mp4'} type="video/mp4" />
+            </video>
+          </div>
         </div>
         <button className={`shop ${raleway.className} font-medium text-base px-5 py-3 bg-[#121212] text-white mt-10 rounded`}>Contact Us</button>
       </section>
@@ -187,13 +182,13 @@ export default function Home() {
         <div className="scroll-container overflow-x-auto w-full mt-10 px-4">
           <div className="cp flex justify-center items-center gap-2 w-full">
             <div className="vid-container rounded-lg overflow-hidden h-[191] min-w-[30%]">
-              <Image className="w-full h-full object-cover" width={76} height={191} alt = 'timeless' src={'/t1.jpg'} />
+              <Image className="w-full h-full object-cover" width={76} height={191} alt='timeless' src={'/t1.jpg'} />
             </div>
             <div className="vid-container rounded-lg overflow-hidden h-[223] min-w-[40%]">
-              <Image className="w-full h-full object-cover" width={120} height={191} alt = 'timeless' src={'/t2.jpg'} />
+              <Image className="w-full h-full object-cover" width={120} height={191} alt='timeless' src={'/t2.jpg'} />
             </div>
             <div className="vid-container rounded-lg overflow-hidden h-[191] min-w-[30%]">
-              <Image className="w-full h-full object-cover" width={76} height={191} alt = 'timeless' src={'/t3.jpg'} />
+              <Image className="w-full h-full object-cover" width={76} height={191} alt='timeless' src={'/t3.jpg'} />
             </div>
           </div>
         </div>
@@ -201,22 +196,22 @@ export default function Home() {
 
       <section className="h-[48vh] w-full">
         <video className="w-full h-full object-cover" width="320" height="240" autoPlay={true} loop={true} muted={true}>
-                <source src={'../drivingvid.mp4'} type="video/mp4"/>
+          <source src={'../drivingvid.mp4'} type="video/mp4" />
         </video>
       </section>
       <section className="mission py-16 mx-auto px-4 grid grid-cols-1 gap-[34px] justify-items-center">
         <div className="mission-card mission-card-shadow rounded-[17px] py-8 px-5 max-w-[300px] flex flex-col justify-center gap-y-6 text-center border-[5px] border-[#fafafa]">
           <div className={`title flex justify-center gap-x-3 items-center  ${raleway.className} font-medium text-base `}>
-            <span className="icon w-[48px] block"><Image className="w-full h-full" width={100} height={100} alt="pics" src ={'/missionsvg.svg'}/> </span>
+            <span className="icon w-[48px] block"><Image className="w-full h-full" width={100} height={100} alt="pics" src={'/missionsvg.svg'} /> </span>
             OUR STORY
           </div>
           <div className={`${raleway.className} font-light text-sm leading-relaxed `}>
-            Our mission is to dispel every trace of self-doubt and diminished self-worth by adorning the modern millennial with accessories that are nothing short of exquisite. Through impeccable craftsmanship, 
+            Our mission is to dispel every trace of self-doubt and diminished self-worth by adorning the modern millennial with accessories that are nothing short of exquisite. Through impeccable craftsmanship,
           </div>
         </div>
         <div className="mission-card mission-card-shadow rounded-[17px] py-8 px-5 max-w-[300px] flex flex-col justify-center gap-y-6 text-center border-[5px] border-[#fafafa]">
           <div className={`title flex justify-center gap-x-3 items-center  ${raleway.className} font-medium text-base `}>
-            <span className="icon w-[48px] block"><Image className="w-full h-full" width={100} height={100} alt="pics" src ={'/missionsvg.svg'}/> </span>
+            <span className="icon w-[48px] block"><Image className="w-full h-full" width={100} height={100} alt="pics" src={'/missionsvg.svg'} /> </span>
             OUR MISSION
           </div>
           <div className={`${raleway.className} font-light text-sm leading-relaxed `}>
@@ -225,11 +220,11 @@ export default function Home() {
         </div>
         <div className="mission-card mission-card-shadow rounded-[17px] py-8 px-5 max-w-[300px] flex flex-col justify-center gap-y-6 text-center border-[5px] border-[#fafafa]">
           <div className={`title flex justify-center gap-x-3 items-center  ${raleway.className} font-medium text-base `}>
-            <span className="icon w-[48px] block"><Image className="w-full h-full" width={100} height={100} alt="pics" src ={'/missionsvg.svg'}/> </span>
+            <span className="icon w-[48px] block"><Image className="w-full h-full" width={100} height={100} alt="pics" src={'/missionsvg.svg'} /> </span>
             OUR VISION
           </div>
           <div className={`${raleway.className} font-light text-sm leading-relaxed `}>
-            Our mission is to dispel every trace of self-doubt and diminished self-worth by adorning the modern millennial with accessories that are nothing short of exquisite. Through impeccable craftsmanship, 
+            Our mission is to dispel every trace of self-doubt and diminished self-worth by adorning the modern millennial with accessories that are nothing short of exquisite. Through impeccable craftsmanship,
           </div>
         </div>
       </section>
@@ -251,22 +246,6 @@ export default function Home() {
             <p className={`${raleway.className} text-[rgba(255,255,255,0.75)] font-medium text-sm`}>Authentic jewelry tester in Lagos</p>
           </div>
         </div>
-      </section>
-      <section className="footer bg-black w-full h-[35vh] px-4 pt-4">
-          <div className="logo w-[134.64px] h-[48.01px]">
-            <Image className="w-full h-full object cover" width={100} height={100} src={'/logoreal.png'} alt="picss" />
-          </div>
-          <div className={`${raleway.className} text text-left text-sm font-light text-white my-4 mb-8`}>
-            Elevating identity through custom jewelry and timeless pieces. Crafted for distinction, designed for legacy.
-          </div>
-          <div className="social-icons flex gap-4">
-            <div className="w-[64px]">
-              <Image className="w-full h-full object-cover" width={100} height={100} alt="pic" src={'/insta.svg'}/>
-            </div>
-            <div className="w-[64px]">
-              <Image className="w-full h-full object-cover" width={100} height={100} alt="pic" src={'/message.svg'}/>
-            </div>
-          </div>
       </section>
     </div>
   );
