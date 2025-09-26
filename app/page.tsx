@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Inter, Lora, Nunito, Playfair_Display } from 'next/font/google';
+import { Inter, Lora, Nunito, Playfair_Display, Poppins } from 'next/font/google';
 import { Raleway } from 'next/font/google';
 import { Prompt } from 'next/font/google';
 import { Plus_Jakarta_Sans } from 'next/font/google';
@@ -33,6 +33,10 @@ export const lora = Lora({
   weight: ['400', '500', '600', '700'], // or your desired weight
 });
 export const nunito = Nunito({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'], // or your desired weight
+});
+export const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'], // or your desired weight
 });
