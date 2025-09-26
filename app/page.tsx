@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Playfair_Display } from 'next/font/google';
+import { Inter, Lora, Nunito, Playfair_Display } from 'next/font/google';
 import { Raleway } from 'next/font/google';
 import { Prompt } from 'next/font/google';
 import { Plus_Jakarta_Sans } from 'next/font/google';
@@ -23,6 +23,18 @@ export const prompt = Prompt({
 export const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['200', '400', '700', '800'], // or your desired weight
+});
+export const inter = Inter({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '700', '800'], // or your desired weight
+});
+export const lora = Lora({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'], // or your desired weight
+});
+export const nunito = Nunito({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'], // or your desired weight
 });
 
 const colCards = [
