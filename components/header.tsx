@@ -39,7 +39,7 @@ export default function Header() {
     );
 }
 
-const Nav = ({ openNav, toggleNav }: { openNav: any, toggleNav: any }) => {
+const Nav = ({ openNav, toggleNav }: { openNav: boolean, toggleNav: Function }) => {
 
     const navLinks = [
         {

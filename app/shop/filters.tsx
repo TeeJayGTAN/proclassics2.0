@@ -31,7 +31,7 @@ export default function Filters() {
     );
 }
 
-const FilterMenu = ({ showFilterMenu, toggleMenu }: { showFilterMenu: any, toggleMenu: any }) => {
+const FilterMenu = ({ showFilterMenu, toggleMenu }: { showFilterMenu: boolean, toggleMenu: Function }) => {
 
     const brands = [
         "Rolex",
