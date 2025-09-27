@@ -2,7 +2,8 @@
 import { raleway } from "@/app/page";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useTransition } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState, useTransition } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { IoIosMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
@@ -10,12 +11,17 @@ import { IoClose } from "react-icons/io5";
 export default function Header() {
     const [openNav, setOpenNav] = useState(false);
     const [_, startTransition] = useTransition();
+    const pathname = usePathname();
 
     const toggleNav = (value: boolean) => {
         startTransition(() => {
             setOpenNav(value)
         })
     }
+
+    useEffect(() => {
+        toggleNav(false);
+    }, [pathname])
 
     return (
         <header className="p-5 grid grid-cols-3 items-center lg:flex lg:justify-center lg:w-full lg:gap-[20px]">
@@ -76,7 +82,7 @@ const Nav = ({ openNav, toggleNav }: { openNav: any, toggleNav: any }) => {
 
     return (
         <div className={`fixed lg:static top-0 left-0 w-full lg:w-max h-full z-50 ${openNav ? "visible" : "invisible lg:visible"} transition-all duration-500`}>
-            <div className={`absolute lg:hidden top-0 left-0 w-full h-full ${openNav ? "bg-[#00000080]" : "bg-transparent"} transition-all duration-500`}>
+            <div onClick={() => toggleNav(false)} className={`absolute lg:hidden top-0 left-0 w-full h-full ${openNav ? "bg-[#00000080]" : "bg-transparent"} transition-all duration-500`}>
 
             </div>
             <div className={`absolute lg:static top-0 w-[300px] lg:w-max h-full ${openNav ? "right-0" : "-right-[300px]"} bg-white transition-all duration-500`}>
