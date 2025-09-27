@@ -1,11 +1,14 @@
 import Image from "next/image";
-import { Inter, Lora, Nunito, Playfair_Display, Poppins } from 'next/font/google';
-import { Raleway } from 'next/font/google';
-import { Prompt } from 'next/font/google';
-import { Plus_Jakarta_Sans } from 'next/font/google';
-import vid1 from '../vid1.mp4';
-import vid2 from '../vid2.mp4';
-import vid3 from '../vid3.mp4';
+import {
+  Inter,
+  Lora,
+  Nunito,
+  Playfair_Display,
+  Poppins,
+  Raleway,
+  Prompt,
+  Plus_Jakarta_Sans
+} from 'next/font/google';
 
 
 export const playfairDisplay = Playfair_Display({
@@ -148,7 +151,7 @@ export default function Home() {
       </section>
 
       <section className="px-4 py-12 w-full mx-auto flex flex-col items-center">
-        <h2 className={`collection-heading ${raleway.className} font-medium text-xl text-center`}>OBSESSIVE ATTENTION.<br className="md:hidden"/> MAKING YOU NEW</h2>
+        <h2 className={`collection-heading ${raleway.className} font-medium text-xl text-center`}>OBSESSIVE ATTENTION.<br className="md:hidden" /> MAKING YOU NEW</h2>
         <div className="collection-grid grid grid-cols-2 md:grid-cols-4 gap-4">
           {
             colCards.map((card, index) => (
@@ -204,7 +207,7 @@ export default function Home() {
         </div>
 
         <button className={`shop md:hidden ${raleway.className} w-[30%] mx-auto font-medium text-base px-5 py-3 bg-[#121212] text-white mt-10 rounded`}>Contact Us</button>
-        
+
       </section>
       <section className="custom-pieces px-4 py-12 w-full mx-auto flex flex-col items-center">
         <h2 className={`cp-heading ${raleway.className} font-medium text-xl text-center`}>TIMELESS PIECES</h2>

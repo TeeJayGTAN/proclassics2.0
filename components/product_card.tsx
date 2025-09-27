@@ -1,5 +1,48 @@
 import Image from "next/image";
-import { lora, nunito } from "@/app/page";
+import {
+    Inter,
+    Lora,
+    Nunito,
+    Playfair_Display,
+    Poppins,
+    Raleway,
+    Prompt,
+    Plus_Jakarta_Sans
+} from 'next/font/google';
+
+
+export const playfairDisplay = Playfair_Display({
+    subsets: ['latin'],
+    weight: '600', // or your desired weight
+});
+export const raleway = Raleway({
+    subsets: ['latin'],
+    weight: ['300', '500', '700', '900'], // or your desired weight
+});
+export const prompt = Prompt({
+    subsets: ['latin'],
+    weight: ['400', '600', '700', '900'], // or your desired weight
+});
+export const plusJakartaSans = Plus_Jakarta_Sans({
+    subsets: ['latin'],
+    weight: ['200', '400', '700', '800'], // or your desired weight
+});
+export const inter = Inter({
+    subsets: ['latin'],
+    weight: ['200', '300', '400', '700', '800'], // or your desired weight
+});
+export const lora = Lora({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'], // or your desired weight
+});
+export const nunito = Nunito({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'], // or your desired weight
+});
+export const poppins = Poppins({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'], // or your desired weight
+});
 
 export default function Product_Card() {
     return (
