@@ -25,7 +25,7 @@ export default function Blog_Details() {
                 <div className={`${inter.className} mt-12 lg:mt-16 w-full`}>
                     <div className="text-[24px] font-semibold">Introduction</div>
                     <div className="text-[#475467] mt-4">
-                        In today’s luxury jewelry market, authenticity is everything
+                        In today&apos;s luxury jewelry market, authenticity is everything
                         — and nowhere is that more true than in Nigeria. With the
                         rising demand for certified gemstones, real diamonds, and
                         authentic moissanite, many buyers are starting to ask the
@@ -45,7 +45,7 @@ export default function Blog_Details() {
                         <br /><br />
                         No guessing. No assumptions. No fakes.
                         <br /><br />
-                        Whether you're testing a natural diamond, moissanite, or your engagement
+                        Whether you&apos;re testing a natural diamond, moissanite, or your engagement
                         ring, this scanner provides a live digital scan and delivers a 99.9%
                         accurate report — printed on the spot.
                         <br /><br />
@@ -66,20 +66,20 @@ export default function Blog_Details() {
                         <br /><br />
                         Getting your piece tested:
                         <br /><br />
-                        Confirms whether it's natural or lab-made
+                        Confirms whether it&apos;s natural or lab-made
                         <br /><br />
                         Protects you from overpriced fakes
                         <br /><br />
                         Increases your confidence when buying, gifting, or insuring luxury jewelry
                         <br /><br />
-                        Whether it’s a new purchase or a piece you've had for years, knowing the truth is worth it.
+                        Whether it’s a new purchase or a piece you&apos;ve had for years, knowing the truth is worth it.
                         <br /><br />
                         💰 Normally $100, But FREE Right Now
                         <br /><br />
                         Jewelry testing at ProClassics normally costs $100 per session, but as of
-                        the time of this blog, we're offering it absolutely FREE.
+                        the time of this blog, we&apos;re offering it absolutely FREE.
                         <br /><br />
-                        It’s our way of helping you shop smarter, protect your investment,
+                        It&apos;s our way of helping you shop smarter, protect your investment,
                         and experience the peace of mind that comes with real, tested, luxury jewelry.
                     </div>
                 </div>
