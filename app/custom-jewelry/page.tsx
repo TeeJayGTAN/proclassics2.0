@@ -73,7 +73,7 @@ export default function Custom_Jewelry() {
                     From custom gold chains, engraved pendants, to iced-out diamond pieces,
                     we bring your idea to life with premium materials and expert finishing.
                     <br /><br />
-                    Whether you’re in Lagos, Abuja, or anywhere in Nigeria,
+                    Whether you&apos;re in Lagos, Abuja, or anywhere in Nigeria,
                     your dream custom piece is just one order away.
                 </section>
 

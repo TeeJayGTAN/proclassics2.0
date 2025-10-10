@@ -15,7 +15,7 @@ export default function Form() {
                     Get in touch
                 </div>
                 <div className={`mt-4 text-[#475467] text-[18px] text-center lg:text-start ${inter.className}`}>
-                    We’d love to hear from you. Please fill out this form.
+                    We&apos;d love to hear from you. Please fill out this form.
                 </div>
                 <div className={`mt-16 text-[#344054] text-[14px] font-medium`}>
                     First name

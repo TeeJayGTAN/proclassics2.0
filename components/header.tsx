@@ -114,10 +114,6 @@ const Nav = ({ openNav, toggleNav }: { openNav: boolean, toggleNav: Function }) 
             url: "/jewelry-testing"
         },
         {
-            name: "Fix Your Jewelry",
-            url: "/fix-your-jewelry"
-        },
-        {
             name: "Custom Jewelry",
             url: "/custom-jewelry"
         }
