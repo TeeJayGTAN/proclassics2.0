@@ -49,7 +49,7 @@ export const poppins = Poppins({
   weight: ["400", "500", "600", "700"], // or your desired weight
 });
 
-export default function ShopPage() {
+export default function CategoryShopPage({ category }: { category: any }) {
   const [products, setProducts] = useState<any[]>([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
@@ -62,7 +62,10 @@ export default function ShopPage() {
 
     setLoading(true);
 
-    const res = await api.get(`/api/product/get-some/${page}`);
+    const res = await api.post(`/api/product/get-some-from-one-category`, {
+      page,
+      slug: category,
+    });
     const data = res.data.products;
     console.log(res);
 
@@ -77,6 +80,7 @@ export default function ShopPage() {
   };
 
   useEffect(() => {
+    setProducts([]);
     fetchProducts();
   }, []);
 
@@ -100,7 +104,7 @@ export default function ShopPage() {
   }, [loaderRef.current]);
 
   return (
-    <div className="mb-20 flex flex-col items-center overflow-hidden">
+    <div className="mb-20 flex flex-col items-center overflow-hidden w-full">
       <div
         className={`bg-[#1E1E1E] w-full py-[40px] px-[20px] ${plusJakartaSans.className} text-center text-white`}
       >
@@ -111,9 +115,9 @@ export default function ShopPage() {
           Lorem ipsum dolor sit amet consectetur
         </div>
       </div>
-      <section className="text-black lg:flex lg:gap-[30px] lg:px-[60px] mt-[60px] lg:mt-[80px] lg:w-full lg:max-w-[1400px]">
+      <section className="text-black w-full lg:flex lg:gap-[30px] lg:px-[60px] mt-[60px] lg:mt-[80px] lg:w-full lg:max-w-[1400px]">
         <div className="hidden lg:block">{/* <Filters /> */}</div>
-        <section className="px-4">
+        <section className="px-4 w-full">
           <div className={`${lora.className} text-[24px] font-semibold`}>
             All Available Products
           </div>
@@ -121,18 +125,18 @@ export default function ShopPage() {
             <Filters />
             <Category_Switch />
           </div> */}
-          <section>
+          <section className="w-full">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-[16px] lg:gap-[24px] mt-4 lg:mt-6">
               {products?.slice(0, 4).map((product) => (
                 <Product_Card product={product} key={product?.slug} />
               ))}
             </div>
           </section>
-          <section className="mt-[40px]">
+          <section className="mt-[40px] w-full">
             <div className={`${raleway.className} font-bold text-[12px]`}>
               CUSTOM JEWELRY
             </div>
-            <div className="mt-[10px]">
+            <div className="mt-[10px] w-full">
               <div className="anotherbanner w-full h-[75vw] max-h-[470px] flex flex-col items-start justify-end p-4">
                 <div
                   className={`${raleway.className} text-[18px] lg:text-[24px] font-bold w-[200px] lg:w-[400px] text-white`}
@@ -188,7 +192,6 @@ export default function ShopPage() {
               {products?.slice(8, 12).map((product) => (
                 <Product_Card product={product} key={product?.slug} />
               ))}
-              <div ref={loaderRef}></div>
             </div>
           </section>
         </section>
